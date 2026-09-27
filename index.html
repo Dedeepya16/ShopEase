@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+      <h1>ShopEase</h1>
+      <div>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#cart">
+    Cart <span id="cart-count">0</span>
+</a>
+      </div>
+    </nav>
+    <section class="hero">
+
+    <h2>Shop Everything You Love</h2>
+    <p>Discover amazing products at great prices.</p>
+    <button onclick="document.getElementById('products').scrollIntoView()">
+    Shop Now
+</button>
+
+    </section>
+    
+    <section id="products">
+
+    <h2>Our Products</h2>
+
+    <div class="filters">
+
+        <input type="text" placeholder="Search products...">
+
+        <select>
+            <option>All Categories</option>
+            <option>Electronics</option>
+            <option>Fashion</option>
+            <option>Accessories</option>
+        </select>
+
+    </div>
+
+    <div class="product-container">
+
+    </div>
+
+</section>
+
+<section id="cart">
+
+    <h2>Your Cart</h2>
+
+    <div class="cart-container">
+
+    </div>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+</section>
+<section id="checkout">
+    <h2>Checkout</h2>
+
+    <form id="checkout-form">
+        <input type="text" id="name" placeholder="Full Name" required>
+
+        <input type="email" id="email" placeholder="Email Address" required>
+
+        <textarea id="address" placeholder="Delivery Address" required></textarea>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <p id="order-message"></p>
+</section>
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">×</button>
+
+        <img id="modal-image" src="" alt="Product">
+
+        <h2 id="modal-name"></h2>
+        <p id="modal-price"></p>
+        <p id="modal-category"></p>
+        <p id="modal-description"></p>
+
+        <button id="modal-cart-button">Add to Cart</button>
+    </div>
+</div>
+<footer>
+
+    <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
